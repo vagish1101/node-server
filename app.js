@@ -1,17 +1,17 @@
 const express = require('express');
 const hbs = require('hbs');
-console.log(hbs);
-var app = express();
 
+const port = process.env.Port || 3000
+var app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'hbs')
 
 app.get('/', (req, res)=>{
      // res.send('Testing');
-   //  res.render('index')
+   res.render('index')
 
 })
 
-app.listen(3000)
+app.listen(port)
 
